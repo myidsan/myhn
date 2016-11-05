@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        My HackerNews
+    </title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class=page>
+        <h1>{{ homePageTitle }}</h1>
+        {% for link in titles %}
+        <p><a href="{{ link[1] }}">{{ link[0] }}</a></p>
+        {% endfor %}
+    </div>
+</body>
+</html>
